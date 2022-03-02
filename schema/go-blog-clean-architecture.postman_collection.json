@@ -1,0 +1,403 @@
+{
+	"info": {
+		"_postman_id": "522aaec4-6a17-4872-afe8-9e438a0b49fd",
+		"name": "go-blog-clean-architecture",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"burhanburdev@gmail.com\",\r\n    \"password\": \"helloworld\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "posts",
+			"item": [
+				{
+					"name": "create post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJ1cmhhbmJ1cmRldkBnbWFpbC5jb20iLCJleHAiOjE2NDYyNTQxNDgsImhpdCI6MTY0NjI1MDU0OCwiaWQiOiI1NDlhMDU1Yi03N2Y4LTQ2ODItODY2YS04NGI5NDlhYmZmZDYifQ.gNRZ5ceI1anH3Tnsw3wMT-78pwOUkCRWowlSOPqHjuw",
+								"type": "text"
+							},
+							{
+								"key": "User-Id",
+								"value": "549a055b-77f8-4682-866a-84b949abffd6",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Hello World!\",\r\n    \"body\": \"Lorem ipsum dolor sit amet\",\r\n    \"slug\": \"hello-world\",\r\n    \"author_id\": \"549a055b-77f8-4682-866a-84b949abffd6\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update post",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJ1cmhhbmJ1cmRldkBnbWFpbC5jb20iLCJleHAiOjE2NDYyNTQxNDgsImhpdCI6MTY0NjI1MDU0OCwiaWQiOiI1NDlhMDU1Yi03N2Y4LTQ2ODItODY2YS04NGI5NDlhYmZmZDYifQ.gNRZ5ceI1anH3Tnsw3wMT-78pwOUkCRWowlSOPqHjuw",
+								"type": "text"
+							},
+							{
+								"key": "User-Id",
+								"value": "549a055b-77f8-4682-866a-84b949abffd6",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"2ac29771-012e-40bb-9c2a-222a658f9684\",\r\n    \"title\": \"Harry Potter\",\r\n    \"slug\": \"harry-potter\",\r\n    \"author_id\": \"549a055b-77f8-4682-866a-84b949abffd6\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all posts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJ1cmhhbmJ1cmRldkBnbWFpbC5jb20iLCJleHAiOjE2NDYyNTQxNDgsImhpdCI6MTY0NjI1MDU0OCwiaWQiOiI1NDlhMDU1Yi03N2Y4LTQ2ODItODY2YS04NGI5NDlhYmZmZDYifQ.gNRZ5ceI1anH3Tnsw3wMT-78pwOUkCRWowlSOPqHjuw",
+								"type": "text"
+							},
+							{
+								"key": "User-Id",
+								"value": "549a055b-77f8-4682-866a-84b949abffd6",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJ1cmhhbmJ1cmRldkBnbWFpbC5jb20iLCJleHAiOjE2NDYyNTQxNDgsImhpdCI6MTY0NjI1MDU0OCwiaWQiOiI1NDlhMDU1Yi03N2Y4LTQ2ODItODY2YS04NGI5NDlhYmZmZDYifQ.gNRZ5ceI1anH3Tnsw3wMT-78pwOUkCRWowlSOPqHjuw",
+								"type": "text"
+							},
+							{
+								"key": "User-Id",
+								"value": "549a055b-77f8-4682-866a-84b949abffd6",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/posts/2ac29771-012e-40bb-9c2a-222a658f9684",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"posts",
+								"2ac29771-012e-40bb-9c2a-222a658f9684"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete post by id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "User-Id",
+								"value": "549a055b-77f8-4682-866a-84b949abffd6",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJ1cmhhbmJ1cmRldkBnbWFpbC5jb20iLCJleHAiOjE2NDYyNTQxNDgsImhpdCI6MTY0NjI1MDU0OCwiaWQiOiI1NDlhMDU1Yi03N2Y4LTQ2ODItODY2YS04NGI5NDlhYmZmZDYifQ.gNRZ5ceI1anH3Tnsw3wMT-78pwOUkCRWowlSOPqHjuw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/posts/b51695df-290d-4123-b3d3-e1505d4cbfa6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"posts",
+								"b51695df-290d-4123-b3d3-e1505d4cbfa6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "create user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Id",
+								"value": "549a055b-77f8-4682-866a-84b949abffd6",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJ1cmhhbmJ1cmRldkBnbWFpbC5jb20iLCJleHAiOjE2NDYyNTAyODIsImhpdCI6MTY0NjI1MDIyMiwiaWQiOiI1NDlhMDU1Yi03N2Y4LTQ2ODItODY2YS04NGI5NDlhYmZmZDYifQ.Q33JVURnojhG_M0INHyNsAj-qwcQJfXfB5rIgyrNrZc",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Burhan Mafazi\",\r\n    \"email\": \"burhanburdev@gmail.com\",\r\n    \"password\": \"burhanbur95\",\r\n    \"phone_number\": \"081387807580\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "User-Id",
+								"value": "549a055b-77f8-4682-866a-84b949abffd6",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJ1cmhhbmJ1cmRldkBnbWFpbC5jb20iLCJleHAiOjE2NDYyNTAzOTIsImhpdCI6MTY0NjI1MDMzMiwiaWQiOiI1NDlhMDU1Yi03N2Y4LTQ2ODItODY2YS04NGI5NDlhYmZmZDYifQ.-ofmQhL-Z7oaWL1bCg9pCEIW08PbXqiIeId2EiToYz4",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"549a055b-77f8-4682-866a-84b949abffd6\",\r\n    \"name\": \"Burhan Mafazi\",\r\n    \"phone_number\": \"08456275553\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJ1cmhhbmJ1cmRldkBnbWFpbC5jb20iLCJleHAiOjE2NDYyNTAxNDAsImhpdCI6MTY0NjI0OTI0MCwiaWQiOiI1NDlhMDU1Yi03N2Y4LTQ2ODItODY2YS04NGI5NDlhYmZmZDYifQ.zI21N0IxUJ7lN52EyrvmsSbdbYDMx35ckyqr0vd0eKs",
+								"type": "text"
+							},
+							{
+								"key": "User-Id",
+								"value": "549a055b-77f8-4682-866a-84b949abffd6",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJ1cmhhbmJ1cmRldkBnbWFpbC5jb20iLCJleHAiOjE2NDYyNTAxNDAsImhpdCI6MTY0NjI0OTI0MCwiaWQiOiI1NDlhMDU1Yi03N2Y4LTQ2ODItODY2YS04NGI5NDlhYmZmZDYifQ.zI21N0IxUJ7lN52EyrvmsSbdbYDMx35ckyqr0vd0eKs",
+								"type": "text"
+							},
+							{
+								"key": "User-Id",
+								"value": "549a055b-77f8-4682-866a-84b949abffd6",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/users/549a055b-77f8-4682-866a-84b949abffd6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"549a055b-77f8-4682-866a-84b949abffd6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user by id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJ1cmhhbmJ1cmRldkBnbWFpbC5jb20iLCJleHAiOjE2NDYyNTAxNDAsImhpdCI6MTY0NjI0OTI0MCwiaWQiOiI1NDlhMDU1Yi03N2Y4LTQ2ODItODY2YS04NGI5NDlhYmZmZDYifQ.zI21N0IxUJ7lN52EyrvmsSbdbYDMx35ckyqr0vd0eKs",
+								"type": "text"
+							},
+							{
+								"key": "User-Id",
+								"value": "549a055b-77f8-4682-866a-84b949abffd6",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/users/549a055b-77f8-4682-866a-84b949abffd6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"549a055b-77f8-4682-866a-84b949abffd6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
