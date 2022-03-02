@@ -24,15 +24,38 @@ git https://github.com/burhanbur/laravel-design-pattern.git
 cd src
 composer update
 ```
-
+- Import database blog.sql in folder schema
 - Configure database and redis in folder config
 - Open the program via the terminal.
+- Rename file .env.example to .env
 - Run the program by typing the command
 
 ```sh
 go run main.go
 ```
-- Rename file .env.example to .env
+
+## Usage
+You can import postman collection in folder schema
+
+| METHOD | ENDPOINT |
+| ------ | ------ |
+| POST | /login |
+
+| METHOD | ENDPOINT |
+| ------ | ------ |
+| POST | /api/users |
+| GET | /api/users |
+| GET | /api/users/:id |
+| PUT | /api/users |
+| DELETE | /api/users/:id |
+
+| METHOD | ENDPOINT |
+| ------ | ------ |
+| POST | /api/posts |
+| GET | /api/posts |
+| GET | /api/posts/:id |
+| PUT | /api/posts |
+| DELETE | /api/posts/:id |
 
 ## What's Inside
 
