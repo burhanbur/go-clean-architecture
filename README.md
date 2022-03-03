@@ -20,9 +20,8 @@ This project has 4 Domain layer :
 - clone apps and install the dependencies
 
 ```sh
-git https://github.com/burhanbur/laravel-design-pattern.git
-cd src
-composer update
+git clone https://github.com/burhanbur/go-clean-architecture.git
+go mod tidy
 ```
 - Import database blog.sql in folder schema
 - Configure database and redis in folder config
